@@ -1,0 +1,75 @@
+body{
+    background-color: #F5F2EE;
+}
+
+/* ---- nav ---- */
+.minha-cor{
+    /* ---- fixar ---- */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* ---- fim fixar ---- */
+    background-color: rgb(18, 18, 19);
+    height: 140px;
+    font-size: 400;
+}
+
+.meu-texto{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.cor-nav{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    /* ---- transição ---- */
+    transition: border-top-color 0.4s ease, color 0.4s ease;
+    /* ---- fim transição ---- */
+}
+
+.cor-nav:hover{
+    border-top: 4px solid rgb(179, 96, 22);
+    color: rgb(179, 96, 22);
+}
+
+@media (max-width: 992px) {
+    .cor-nav:hover {
+        border-top: none;
+    }
+    .cor-nav{
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 700;
+          text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+    }
+}
+
+/* ---- header  ---- */
+.meu-header{
+    background-color: rgb(53, 39, 29);
+    margin-top: 140px;
+}
+
+
+/* ---- texto edu pani ---- */
+.cor-texto-edu-pani{
+    background-color: #EAE4DC;
+}
+
+/* ---- cor bloco espaços edu pani ---- */
+.cor-bloco{
+    background-color: #EAE4DC;
+}
+
+/* ---- cor footer ---- */
+.cor-footer{
+    background-color: rgb(18, 18, 19);
+}
+
