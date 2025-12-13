@@ -141,3 +141,31 @@ p.texto-p{
     background-color: rgb(214, 209, 201);
 }
 
+/* ---- page de espaços ---- */
+
+.espacamento{
+    margin-top: 140px;
+}
+
+.fundo-tela-espaco{
+    background-color: rgb(53, 39, 29);
+}
+
+h2.titulo{
+    color: #F5F2EE;
+    font-weight: bold;
+}
+
+p.texto-p-espaco{
+    color: #8a837a;
+    font-size: 25px;
+}
+
+.cor-2{
+    background-color: rgb(80, 60, 45)
+}
+
+.img-fluid {
+    border: 8px solid #615e59; /* borda marrom escura */
+    border-radius: 15px;       /* cantos arredondados */
+}
