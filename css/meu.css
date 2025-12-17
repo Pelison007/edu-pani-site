@@ -169,3 +169,188 @@ p.texto-p-espaco{
     border: 8px solid #615e59; /* borda marrom escura */
     border-radius: 15px;       /* cantos arredondados */
 }
+
+
+/* ---- page de redes sociais ---- */
+.espacamento-box-redes-sociais{
+    gap: 130px;
+    margin-top: 50px;
+}
+
+.card-personalizado2 {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-personalizado2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.89);
+}
+
+.carousel-fake-rede-social {
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+  .espacamento-box-redes-sociais {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .espacamento-box-redes-sociais .animacao {
+    width: 100% !important;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 992px) {
+  .espacamento-box-redes-sociais {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .espacamento-box-redes-sociais .animacao {
+    width: 100% !important;
+    max-width: 360px;
+  }
+}
+
+
+/* ---- transição page ---- */
+
+/* estado inicial */
+/* Overlay */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #000000; /* marrom escuro (ajuste se quiser) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* esconder */
+#page-loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Pontinhos */
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dots span {
+  width: 16px;
+  height: 16px;
+  background: #41271c; /* preto */
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+/* atraso entre eles */
+.dots span:nth-child(1) { animation-delay: 0s; }
+.dots span:nth-child(2) { animation-delay: 0.15s; }
+.dots span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* ---- footer redes sociais icons ---- */
+
+.social-icons a {
+    font-size: 1.5rem; /* tamanho dos ícones */
+    margin-right: 10px;
+    transition: transform 0.2s; /* efeito hover */
+}
+
+.social-icons a i {
+    color: #ffffff; /* cor padrão, se quiser branco antes do hover */
+}
+
+/* Cores das redes sociais */
+.social-icons a.instagram i {
+    color: #E1306C; /* rosa Instagram */
+}
+
+.social-icons a.facebook i {
+    color: #1877F2; /* azul Facebook */
+}
+
+/* Efeito ao passar o mouse */
+.social-icons a:hover i {
+    transform: scale(1.2); /* aumenta o ícone levemente */
+    opacity: 0.8;
+}
+
+/* ---- botão whatsapp fixo ---- */
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  z-index: 9999;
+
+  /* começa invisível */
+  opacity: 0;
+  pointer-events: none;
+
+  /* transição para sumir/entrar suavemente */
+  transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* efeito hover */
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* classe para esconder explicitamente (opcional) */
+.whatsapp-fixo.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* classe para mostrar */
+.whatsapp-fixo.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+/* mobile */
+@media(max-width: 576px){
+  .whatsapp-fixo {
+    width: 70px;
+    height: 70px;
+    font-size: 36px;
+    bottom: 20px;
+    right: 25px; /* mais afastado da lateral no celular */
+  }
+}
+
