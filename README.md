@@ -1,9 +1,5 @@
 # 🍳 CookBook API
 
-<p align="center">
-  <img src="https://unsplash.com" alt="CookBook Header Banner" width="100%" height="250px" style="object-fit: cover; border-radius: 8px;"/>
-</p>
-
 ### 👥 Integrantes
 * **[Seu Nome Completo]**
 * **[Nome Completo do Integrante 2]**
@@ -16,7 +12,9 @@
 
 ## 📝 Resumo
 
+<div style="text-align: justify;">
 O CookBook é uma plataforma digital projetada para simplificar a gestão culinária diária, atuando como um assistente inteligente para o mapeamento e o gerenciamento de receitas. Desenvolvido com foco na eficiência e na redução do desperdício de alimentos, o ecossistema armazena de forma estruturada os ingredientes e os passos sequenciais de preparo. O grande diferencial do sistema reside na sua capacidade de cruzar dados em tempo real, permitindo que os usuários descubram instantaneamente quais pratos podem ser cozinhados com base exclusivamente nos insumos que possuem disponíveis em suas dispensas domésticas.
+</div>
 
 ---
 
@@ -32,26 +30,33 @@ O CookBook é uma plataforma digital projetada para simplificar a gestão culin�
 ## 🔍 Descrição das Funcionalidades
 
 ### 🥦 Gerenciamento de Ingredientes
+<div style="text-align: justify;">
 Esta funcionalidade provê uma base de dados centralizada para o cadastro de itens alimentícios. Cada ingrediente possui um registro único, o que evita a duplicidade de informações. O sistema permite especificar nomes comerciais ou genéricos, servindo como a fundação para o controle de estoque de despensa dos usuários.
+</div>
 
 ### ⏱️ Modelagem de Etapas de Preparo
+<div style="text-align: justify;">
 As etapas de preparo ditam a linha cronológica de execução da receita. Cada passo é indexado de forma sequencial (ex: Passo 1, Passo 2), contendo instruções textuais detalhadas sobre o que deve ser feito. Essa separação estrutural garante que as instruções de preparo permaneçam organizadas e fáceis de serem renderizadas em qualquer interface visual.
+</div>
 
 ### 🔗 Vínculo Dinâmico de Receitas (Tabela Pivô)
+<div style="text-align: justify;">
 Através de uma arquitetura relacional otimizada, o sistema conecta receitas a múltiplos ingredientes e quantidades específicas (ex: 200g de farinha, 3 unidades de ovos). Esta abordagem separa a existência física do ingrediente em si da quantidade exata exigida por um prato específico, permitindo a reutilização do mesmo insumo em centenas de receitas diferentes.
+</div>
 
 ### 🧮 Busca Inversa por Insumos
+<div style="text-align: justify;">
 É o motor de inteligência da API. O usuário envia uma lista com os ingredientes que possui em mãos e o sistema realiza uma varredura na tabela relacional. Ele filtra e retorna apenas as receitas cujos requisitos de ingredientes sejam atendidos integralmente ou parcialmente pelos itens fornecidos, otimizando o uso de mantimentos e sugerindo opções práticas para o dia a dia.
+</div>
 
 ---
 
 ## 🏛️ Arquitetura e Banco de Dados
 
-O backend é construído sobre o ecossistema **ASP.NET Core** utilizando o template de **API Mínima** (`dotnet new web`), o que confere alta performance e baixa latência ao projeto. 
-
-<p align="center">
-  <img src="https://holistics.io" alt="Database Schema Concept Diagram" width="500px" style="border-radius: 6px;"/>
-</p>
+<div style="text-align: justify;">
+O backend é construído sobre o ecossistema <strong>ASP.NET Core</strong> utilizando o template de <strong>API Mínima</strong> (<code>dotnet new web</code>), o que confere alta performance e baixa latência ao projeto.
+</div>
+<br>
 
 Para sustentar as funcionalidades descritas, a modelagem relacional do banco de dados foi estruturada da seguinte forma:
 
@@ -66,17 +71,13 @@ Para sustentar as funcionalidades descritas, a modelagem relacional do banco de 
 
 ## 🤖 Uso de AI (Inteligência Artificial)
 
-<p align="center">
-  <img src="https://vecteezy.com" alt="AI Assisted Coding Icon" width="120px"/>
-</p>
-
 ### 🛠️ Ferramenta Utilizada
 * **Modelo de Linguagem:** OpenAI GPT-4o / Claude 3.5 Sonnet (via assistente de IA).
 
 ### ⚙️ Forma de Uso
-* **Geração de Testes Automatizados:** A ferramenta de IA foi integrada ao fluxo de desenvolvimento para analisar a lógica de negócio dos endpoints da API Mínima e gerar cenários de testes unitários e de integração correspondentes.
-* **Escrita de Documentação Técnica:** Utilizada para expandir as notas rascunhadas do projeto em um formato de documentação acadêmica formal, padronizando a descrição das funcionalidades e gerando o layout Markdown da modelagem de dados.
+* **Geração de Testes Automatizados:** <div style="text-align: justify; display: inline;">A ferramenta de IA foi integrada ao fluxo de desenvolvimento para analisar a lógica de negócio dos endpoints da API Mínima e gerar cenários de testes unitários e de integração correspondentes.</div>
+* **Escrita de Documentação Técnica:** <div style="text-align: justify; display: inline;">Utilizada para expandir as notas rascunhadas do projeto em um formato de documentação acadêmica formal, padronizando a descrição das funcionalidades e gerando o layout Markdown da modelagem de dados.</div>
 
 ### 📑 Revisões Realizadas
-* **Correção Arquitetural:** A IA auxiliou na identificação de um problema de modelagem na antiga tabela `ReceitasIngredientesEtapas`. Foi realizada a separação das Etapas e a criação de uma tabela pivô exclusiva para os Ingredientes (`ReceitasIngredientes`), otimizando o algoritmo de busca reversa.
-* **Ajuste de Tom:** O texto gerado automaticamente passou por revisão humana para garantir o alinhamento com os critérios de avaliação da banca acadêmica, mantendo a clareza técnica e eliminando termos redundantes.
+* **Correção Arquitetural:** <div style="text-align: justify; display: inline;">A IA auxiliou na identificação de um problema de modelagem na antiga tabela <code>ReceitasIngredientesEtapas</code>. Foi realizada a separação das Etapas e a criação de uma tabela pivô exclusiva para os Ingredientes (<code>ReceitasIngredientes</code>), otimizando o algoritmo de busca reversa.</div>
+* **Ajuste de Tom:** <div style="text-align: justify; display: inline;">O texto gerado automaticamente passou por revisão humana para garantir o alinhamento com os critérios de avaliação da banca acadêmica, mantendo a clareza técnica e eliminando termos redundantes.</div>
