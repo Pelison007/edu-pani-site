@@ -1,7 +1,7 @@
 # 🍳 CookBook API
 
 ### 👥 Integrantes
-* **[João Henrique Pelison Bastos]**
+* **[Seu Nome Completo]**
 * **[Nome Completo do Integrante 2]**
 * **[Nome Completo do Integrante 3]**
 
@@ -36,7 +36,7 @@ Esta funcionalidade provê uma base de dados centralizada para o cadastro de ite
 
 ### ⏱️ Modelagem de Etapas de Preparo
 <p align="justify">
-As etapas de preparo ditam a linha cronológica de execução da receita. Cada passo é indexado de forma sequencial (ex: Passo 1, Passo 2), contendo instruções textuais detalhadas sobre o que deve ser feito. Essa separação estrutural garante que as instruções de preparo permaneçam organizadas e fáceis de serem renderizadas em qualquer interface visual.
+As etapas de preparo ditam a linha cronológica de execução da receita. Cada passo é indexado de forma sequencial (ex: Passo 1, Passo 2), contendo instruções textuais detalhadas sobre o que deve ser feito. Essa separação estrutural garante que as instruções de preparo permaneceram organizadas e fáceis de serem renderizadas em qualquer interface visual.
 </p>
 
 ### 🔗 Vínculo Dinâmico de Receitas (Tabela Pivô)
@@ -48,6 +48,24 @@ Através de uma arquitetura relacional otimizada, o sistema conecta receitas a m
 <p align="justify">
 É o motor de inteligência da API. O usuário envia uma lista com os ingredientes que possui em mãos e o sistema realiza uma varredura na tabela relacional. Ele filtra e retorna apenas as receitas cujos requisitos de ingredientes sejam atendidos integralmente ou parcialmente pelos itens fornecidos, otimizando o uso de mantimentos e sugerindo opções práticas para o dia a dia.
 </p>
+
+---
+
+## 🔄 Jornada do Usuário e Fluxo da Aplicação
+
+<p align="justify">
+Para garantir uma experiência fluida e otimizar o consumo de dados entre a aplicação web (frontend) e a API (backend), o fluxo de navegação do usuário final foi projetado e dividido em dois passos operacionais sequenciais:
+</p>
+
+### 1. Etapa de Busca por Insumos
+* **Ação do Usuário:** O usuário abre o aplicativo, visualiza a lista de ingredientes cadastrados no sistema e marca caixas de seleção (checkboxes) indicando apenas os insumos que ele possui em sua dispensa no momento (ex: Ovo, Farinha, Açúcar e Cenoura). *Nesta etapa, o usuário não precisa informar quantidades.*
+* **Comportamento do Backend:** A API recebe exclusivamente a lista de IDs desses ingredientes. O sistema executa um cruzamento rápido na tabela pivô `ReceitasIngredientes` e localiza quais receitas têm seus requisitos totalmente preenchidos por aquela dispensa.
+* **Retorno Visual:** O backend devolve para a tela uma lista simplificada contendo os nomes das receitas encontradas. Para cada receita da lista, o sistema exibe automaticamente os ingredientes necessários acompanhados de suas respectivas **Quantidades** e **Unidades de Medida** (ex: 3 unidades de Cenoura, 2 xícaras de Farinha), permitindo que o usuário valide se os seus insumos são suficientes em volume.
+
+### 2. Etapa de Detalhes e Modo de Preparo
+* **Ação do Usuário:** Após analisar as opções sugeridas pela busca, o usuário decide qual prato deseja cozinhar e **clica em cima do card da receita** escolhida (ex: "Bolo de Cenoura").
+* **Comportamento do Backend:** Ao receber o clique, o frontend faz uma nova requisição à API passando o ID único daquela receita específica. O backend faz uma busca direta na tabela principal de `Receitas` e recupera todas as linhas associadas na tabela sequencial de `Etapas`.
+* **Retorno Visual:** A tela do aplicativo é atualizada para exibir a ficha técnica completa do prato: o título, a descrição contextual da receita e o **passo a passo cronológico ordenado** (Passo 1, Passo 2, Passo 3, etc.). Essa separação garante que textos longos de instruções de preparo só trafeguem pela rede quando o usuário realmente decidir fazer aquele prato.
 
 ---
 
