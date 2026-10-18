@@ -1,12 +1,11 @@
 # 🍳 CookBook API
 
 ### 👥 Integrantes
-* **[Seu Nome Completo]**
-* **[Nome Completo do Integrante 2]**
-* **[Nome Completo do Integrante 3]**
+* **[João Henrique Pelison Bastos]**
+* **[Matheus Teclak Camilo]**
+* **[Osmar Cardoso Lopes Filho]**
 
-**🎓 Curso:** [Nome do Seu Curso - Ex: Análise e Desenvolvimento de Sistemas]  
-**🏫 Turma:** [Sua Turma - Ex: 3º Período - Noite]
+**🎓 Curso:** [Ciência da Computação]  
 
 ---
 
