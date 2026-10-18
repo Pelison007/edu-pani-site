@@ -1,7 +1,7 @@
 # 🍳 CookBook API
 
 ### 👥 Integrantes
-* **[Seu Nome Completo]**
+* **[João Henrique Pelison Bastos]**
 * **[Nome Completo do Integrante 2]**
 * **[Nome Completo do Integrante 3]**
 
@@ -12,9 +12,9 @@
 
 ## 📝 Resumo
 
-<div style="text-align: justify;">
+<p align="justify">
 O CookBook é uma plataforma digital projetada para simplificar a gestão culinária diária, atuando como um assistente inteligente para o mapeamento e o gerenciamento de receitas. Desenvolvido com foco na eficiência e na redução do desperdício de alimentos, o ecossistema armazena de forma estruturada os ingredientes e os passos sequenciais de preparo. O grande diferencial do sistema reside na sua capacidade de cruzar dados em tempo real, permitindo que os usuários descubram instantaneamente quais pratos podem ser cozinhados com base exclusivamente nos insumos que possuem disponíveis em suas dispensas domésticas.
-</div>
+</p>
 
 ---
 
@@ -30,32 +30,32 @@ O CookBook é uma plataforma digital projetada para simplificar a gestão culin�
 ## 🔍 Descrição das Funcionalidades
 
 ### 🥦 Gerenciamento de Ingredientes
-<div style="text-align: justify;">
+<p align="justify">
 Esta funcionalidade provê uma base de dados centralizada para o cadastro de itens alimentícios. Cada ingrediente possui um registro único, o que evita a duplicidade de informações. O sistema permite especificar nomes comerciais ou genéricos, servindo como a fundação para o controle de estoque de despensa dos usuários.
-</div>
+</p>
 
 ### ⏱️ Modelagem de Etapas de Preparo
-<div style="text-align: justify;">
+<p align="justify">
 As etapas de preparo ditam a linha cronológica de execução da receita. Cada passo é indexado de forma sequencial (ex: Passo 1, Passo 2), contendo instruções textuais detalhadas sobre o que deve ser feito. Essa separação estrutural garante que as instruções de preparo permaneçam organizadas e fáceis de serem renderizadas em qualquer interface visual.
-</div>
+</p>
 
 ### 🔗 Vínculo Dinâmico de Receitas (Tabela Pivô)
-<div style="text-align: justify;">
+<p align="justify">
 Através de uma arquitetura relacional otimizada, o sistema conecta receitas a múltiplos ingredientes e quantidades específicas (ex: 200g de farinha, 3 unidades de ovos). Esta abordagem separa a existência física do ingrediente em si da quantidade exata exigida por um prato específico, permitindo a reutilização do mesmo insumo em centenas de receitas diferentes.
-</div>
+</p>
 
 ### 🧮 Busca Inversa por Insumos
-<div style="text-align: justify;">
+<p align="justify">
 É o motor de inteligência da API. O usuário envia uma lista com os ingredientes que possui em mãos e o sistema realiza uma varredura na tabela relacional. Ele filtra e retorna apenas as receitas cujos requisitos de ingredientes sejam atendidos integralmente ou parcialmente pelos itens fornecidos, otimizando o uso de mantimentos e sugerindo opções práticas para o dia a dia.
-</div>
+</p>
 
 ---
 
 ## 🏛️ Arquitetura e Banco de Dados
 
-<div style="text-align: justify;">
+<p align="justify">
 O backend é construído sobre o ecossistema <strong>ASP.NET Core</strong> utilizando o template de <strong>API Mínima</strong> (<code>dotnet new web</code>), o que confere alta performance e baixa latência ao projeto.
-</div>
+</p>
 <br>
 
 Para sustentar as funcionalidades descritas, a modelagem relacional do banco de dados foi estruturada da seguinte forma:
@@ -75,9 +75,9 @@ Para sustentar as funcionalidades descritas, a modelagem relacional do banco de 
 * **Modelo de Linguagem:** OpenAI GPT-4o / Claude 3.5 Sonnet (via assistente de IA).
 
 ### ⚙️ Forma de Uso
-* **Geração de Testes Automatizados:** <div style="text-align: justify; display: inline;">A ferramenta de IA foi integrada ao fluxo de desenvolvimento para analisar a lógica de negócio dos endpoints da API Mínima e gerar cenários de testes unitários e de integração correspondentes.</div>
-* **Escrita de Documentação Técnica:** <div style="text-align: justify; display: inline;">Utilizada para expandir as notas rascunhadas do projeto em um formato de documentação acadêmica formal, padronizando a descrição das funcionalidades e gerando o layout Markdown da modelagem de dados.</div>
+* **Geração de Testes Automatizados:** <p align="justify">A ferramenta de IA foi integrada ao fluxo de desenvolvimento para analisar a lógica de negócio dos endpoints da API Mínima e gerar cenários de testes unitários e de integração correspondentes.</p>
+* **Escrita de Documentação Técnica:** <p align="justify">Utilizada para expandir as notas rascunhadas do projeto em um formato de documentação acadêmica formal, padronizando a descrição das funcionalidades e gerando o layout Markdown da modelagem de dados.</p>
 
 ### 📑 Revisões Realizadas
-* **Correção Arquitetural:** <div style="text-align: justify; display: inline;">A IA auxiliou na identificação de um problema de modelagem na antiga tabela <code>ReceitasIngredientesEtapas</code>. Foi realizada a separação das Etapas e a criação de uma tabela pivô exclusiva para os Ingredientes (<code>ReceitasIngredientes</code>), otimizando o algoritmo de busca reversa.</div>
-* **Ajuste de Tom:** <div style="text-align: justify; display: inline;">O texto gerado automaticamente passou por revisão humana para garantir o alinhamento com os critérios de avaliação da banca acadêmica, mantendo a clareza técnica e eliminando termos redundantes.</div>
+* **Correção Arquitetural:** <p align="justify">A IA auxiliou na identificação de um problema de modelagem na antiga tabela ReceitasIngredientesEtapas. Foi realizada a separação das Etapas e a criação de uma tabela pivô exclusiva para os Ingredientes (ReceitasIngredientes), otimizando o algoritmo de busca reversa.</p>
+* **Ajuste de Tom:** <p align="justify">O texto gerado automaticamente passou por revisão humana para garantir o alinhamento com os critérios de avaliação da banca acadêmica, mantendo a clareza técnica e eliminando termos redundantes.</p>
