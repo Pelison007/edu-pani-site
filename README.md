@@ -90,12 +90,8 @@ Para sustentar as funcionalidades descritas, a modelagem relacional do banco de 
 ## 🤖 Uso de AI (Inteligência Artificial)
 
 ### 🛠️ Ferramenta Utilizada
-* **Modelo de Linguagem:** OpenAI GPT-4o / Claude 3.5 Sonnet (via assistente de IA).
+* **Modelos de Linguagem:** OpenAI ChatGPT (baseado em GPT-4o) e Claude 3.5 Sonnet (via assistente de IA).
 
 ### ⚙️ Forma de Uso
 * **Geração de Testes Automatizados:** <p align="justify">A ferramenta de IA foi integrada ao fluxo de desenvolvimento para analisar a lógica de negócio dos endpoints da API Mínima e gerar cenários de testes unitários e de integração correspondentes.</p>
 * **Escrita de Documentação Técnica:** <p align="justify">Utilizada para expandir as notas rascunhadas do projeto em um formato de documentação acadêmica formal, padronizando a descrição das funcionalidades e gerando o layout Markdown da modelagem de dados.</p>
-
-### 📑 Revisões Realizadas
-* **Correção Arquitetural:** <p align="justify">A IA auxiliou na identificação de um problema de modelagem na antiga tabela ReceitasIngredientesEtapas. Foi realizada a separação das Etapas e a criação de uma tabela pivô exclusiva para os Ingredientes (ReceitasIngredientes), otimizando o algoritmo de busca reversa.</p>
-* **Ajuste de Tom:** <p align="justify">O texto gerado automaticamente passou por revisão humana para garantir o alinhamento com os critérios de avaliação da banca acadêmica, mantendo a clareza técnica e eliminando termos redundantes.</p>
